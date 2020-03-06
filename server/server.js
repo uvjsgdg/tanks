@@ -66,7 +66,7 @@ class Server {
                 if (this.connections[id].userName) {
                     if(data.userName){
                         if(data.userName != clientData.userName){
-                            socket.emit('serverReport', 'ERROR! Sent data for wrong user');
+                            socket.emit('serverReport', 'ERROR! Sent move data for wrong user');
                         }
                     }
                     else{
@@ -74,6 +74,25 @@ class Server {
                     }
                     clientData.moveData = data;
                     socket.broadcast.emit('updateMove',data);
+                }
+                else {
+                    socket.emit('serverReport', 'ERROR! You first need to login using /login');
+                }
+            });
+
+            socket.on('sendAttack', (data) => {
+                console.log('[' + id + '] sendAttack: ' + message);
+                if (this.connections[id].userName) {
+                    if(data.userName){
+                        if(data.userName != clientData.userName){
+                            socket.emit('serverReport', 'ERROR! Sent attack data for wrong user');
+                        }
+                    }
+                    else{
+                        data.userName = clientData.userName;
+                    }
+                    clientData.attackData = data;
+                    socket.broadcast.emit('reportAttack',data);
                 }
                 else {
                     socket.emit('serverReport', 'ERROR! You first need to login using /login');
