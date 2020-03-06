@@ -3,5 +3,8 @@
         "frame": "tankBody",
         "startingX": 200,
         "startingY": 250
+    },
+    "barrel": {
+        "frame": "tankBarrel"
     }
 }

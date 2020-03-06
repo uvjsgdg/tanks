@@ -2,6 +2,7 @@ import config from '../config/game';
 
 import SocketSession from '../networking/socket-session';
 import PlayerSprite from '../sprites/player';
+import BarrelSprite from '../sprites/tankBarrel';
 
 import KeyBoardController from '../controllers/keyboard';
 
@@ -104,7 +105,9 @@ export default class PlayGameScene extends Phaser.Scene {
 
     createPlayer () {
         let player = new PlayerSprite(this);
+        let barrel = new BarrelSprite(this);
         this.add.existing(player);
+        this.add.existing(barrel);
     }
 
     createControllers () {
