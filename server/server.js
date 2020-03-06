@@ -127,7 +127,7 @@ class Server {
                         clientData.userName = userName;
                         this.game.addUser(userName);
                         socket.emit('yourUserName', userName);
-                        socket.broadcast.emit('createPlayer',username);
+                        socket.broadcast.emit('createPlayer',userName);
                         console.log('[' + id + '] LOGGED IN AS [' + userName + ']');
                     }
                 }
