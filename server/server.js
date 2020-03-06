@@ -52,12 +52,12 @@ class Server {
                 if (this.connections[id].userName) {
                     Object.values(this.connections).forEach((c) => {
                         if (c.userName) {
-                            c.socket.emit('serverReport', '[' + this.connections[id].userName + '] ' + message);
+                            c.socket.emit('serverMessage', { action: 'serverReport', data: '[' + this.connections[id].userName + '] ' + message });
                         }
                     });
                 }
                 else {
-                    socket.emit('serverReport', 'ERROR! You first need to login using /login');
+                    socket.emit('serverMessage', { action: 'serverReport', data: 'ERROR! You first need to login using /login' });
                 }
             });
 
@@ -66,17 +66,17 @@ class Server {
                 if (this.connections[id].userName) {
                     if(data.userName){
                         if(data.userName != clientData.userName){
-                            socket.emit('serverReport', 'ERROR! Sent move data for wrong user');
+                            socket.emit('serverMessage', { action: 'serverReport', data: 'ERROR! Sent move data for wrong user' });
                         }
                     }
                     else{
                         data.userName = clientData.userName;
                     }
                     clientData.moveData = data;
-                    socket.broadcast.emit('playerMove',data);
+                    socket.broadcast.emit('serverMessage', { action: 'playerMove', data: data });
                 }
                 else {
-                    socket.emit('serverReport', 'ERROR! You first need to login using /login');
+                    socket.emit('serverMessage', { action: 'serverReport', data: 'ERROR! You first need to login using /login' });
                 }
             });
 
@@ -85,17 +85,17 @@ class Server {
                 if (this.connections[id].userName) {
                     if(data.userName){
                         if(data.userName != clientData.userName){
-                            socket.emit('serverReport', 'ERROR! Sent attack data for wrong user');
+                            socket.emit('serverMessage', { action: 'serverReport', data: 'ERROR! Sent attack data for wrong user' });
                         }
                     }
                     else{
                         data.userName = clientData.userName;
                     }
                     clientData.attackData = data;
-                    socket.broadcast.emit('reportAttack',data);
+                    socket.broadcast.emit('serverMessage', { action: 'reportAttack', data: data });
                 }
                 else {
-                    socket.emit('serverReport', 'ERROR! You first need to login using /login');
+                    socket.emit('serverMessage', { action: 'serverReport', data: 'ERROR! You first need to login using /login' });
                 }
             });
 
@@ -105,7 +105,7 @@ class Server {
                     return;
                 if (this.connections[id].userName) {
                     console.log('[' + this.connections[id].userName + '] Ignoring relogin attempt as ' + userName);
-                    socket.emit('serverReport', 'You are already logged in as ' + this.connections[id].userName);
+                    socket.emit('serverMessage', { action: 'serverReport', data: 'You are already logged in as ' + this.connections[id].userName });
                 }
                 else {
                     let taken = 0;
@@ -116,7 +116,7 @@ class Server {
                         }
                     });
                     if (taken) {
-                        socket.emit('serverReport', 'Sorry, that username is already taken');
+                        socket.emit('serverMessage', { action: 'serverReport', data: 'Sorry, that username is already taken' });
                     }
                     else {
                         Object.values(this.connections).forEach((c) => {
@@ -126,8 +126,8 @@ class Server {
                         });
                         clientData.userName = userName;
                         this.game.addUser(userName);
-                        socket.emit('yourUserName', userName);
-                        socket.broadcast.emit('createPlayer',userName);
+                        socket.emit('serverMessage', { action: 'yourUserName', data: userName });
+                        socket.broadcast.emit('serverMessage', { action: 'createPlayer', data: userName });
                         console.log('[' + id + '] LOGGED IN AS [' + userName + ']');
                     }
                 }
@@ -145,24 +145,24 @@ class Server {
                         }
                     }
                 });
-                socket.emit('players',players);
+                socket.emit('serverMessage', { action: 'players', data: players });
             });
 
             socket.on('doLogout', () => {
                 if (this.connections[id].userName) {
                     console.log('[' + id + '] doLogout: ' + this.connections[id].userName);
-                    socket.emit('serverReport', this.connections[id].userName + ', you have been logged out!');
+                    socket.emit('serverMessage', { action: 'serverReport', data: this.connections[id].userName + ', you have been logged out!' });
                     this.game.removeUser(this.connections[id].userName);
                     clientData.userName = null;
                     delete this.connections[id].userName;
                 }
                 else {
                     console.log('[' + id + '] Ignoring logout attempt because not logged in!');
-                    socket.emit('serverReport', 'Sorry, you are not logged in.');
+                    socket.emit('serverMessage', { action: 'serverReport', data: 'Sorry, you are not logged in.' });
                 }
             });
 
-            socket.emit('yourID', id);
+            socket.emit('serverMessage', { action: 'yourID', data: id });
         });
     }
 
