@@ -59,6 +59,9 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     create () {
+        this.socketSession = new SocketSession();
+
+        this.socketSession.connect();
     }
 
     update () {
