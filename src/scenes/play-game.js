@@ -166,5 +166,16 @@ export default class PlayGameScene extends Phaser.Scene {
                 this.tilemap.setCollisionByProperty({collides: true}, true, true, this.tileLayers[layer.name]);
             }
         });
+
+        let objectSet = _.find(this.cache.tilemap.get(config.map.key).data.tilesets, { name: "objects" }).tiles;
+        let objectGroups = _.filter(this.cache.tilemap.get(config.map.key).data.layers, { type: 'objectgroup' });
+        this.objects = [];
+        objectGroups.forEach(layer => {
+            layer.objects.forEach(object => {
+                let spriteObject = this.physics.add.image(object.x, object.y, config.spriteAtlas.key, objectSet[object.id].type);
+                spriteObject.setImmovable(true);
+                this.objects.push(spriteObject);
+            });
+        });
     }
 };

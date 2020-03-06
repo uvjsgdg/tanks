@@ -66,5 +66,6 @@ export default class LoadingScene extends Phaser.Scene {
         gameConfig.map.tilesets.forEach(tileset => {
             this.load.image(tileset.key, tileset.file);
         });        
+
     }
 };

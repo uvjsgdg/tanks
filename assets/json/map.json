@@ -259,7 +259,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"barrelGreen"
-                        }]
+                        }],
+                 "type":"barrelGreen"
                 }, 
                 {
                  "id":1,
@@ -271,7 +272,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"barrelRed"
-                        }]
+                        }],
+                 "type":"barrelRed"
                 }, 
                 {
                  "id":2,
@@ -283,7 +285,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"barricadeMetal"
-                        }]
+                        }],
+                 "type":"barricadeMetal"
                 }, 
                 {
                  "id":3,
@@ -295,7 +298,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"barricadeWood"
-                        }]
+                        }],
+                 "type":"barricadeWood"
                 }, 
                 {
                  "id":4,
@@ -307,7 +311,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"crateWood"
-                        }]
+                        }],
+                 "type":"crateWood"
                 }, 
                 {
                  "id":5,
@@ -319,7 +324,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"gemBlue"
-                        }]
+                        }],
+                 "type":"gemBlue"
                 }, 
                 {
                  "id":6,
@@ -331,7 +337,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"gemGreen"
-                        }]
+                        }],
+                 "type":"gemGreen"
                 }, 
                 {
                  "id":7,
@@ -343,7 +350,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"gemOrange"
-                        }]
+                        }],
+                 "type":"gemOrange"
                 }, 
                 {
                  "id":8,
@@ -355,7 +363,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"gemYellow"
-                        }]
+                        }],
+                 "type":"gemYellow"
                 }, 
                 {
                  "id":9,
@@ -367,7 +376,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"oilSpill_large"
-                        }]
+                        }],
+                 "type":"oilSpill_large"
                 }, 
                 {
                  "id":10,
@@ -379,7 +389,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"oilSpill_small"
-                        }]
+                        }],
+                 "type":"oilSpill_small"
                 }, 
                 {
                  "id":11,
@@ -391,7 +402,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"treeBrown_large"
-                        }]
+                        }],
+                 "type":"treeBrown_large"
                 }, 
                 {
                  "id":12,
@@ -403,7 +415,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"treeBrown_small"
-                        }]
+                        }],
+                 "type":"treeBrown_small"
                 }, 
                 {
                  "id":13,
@@ -415,7 +428,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"treeBrown_twigs"
-                        }]
+                        }],
+                 "type":"treeBrown_twigs"
                 }, 
                 {
                  "id":14,
@@ -427,7 +441,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"treeGreen_large"
-                        }]
+                        }],
+                 "type":"treeGreen_large"
                 }, 
                 {
                  "id":15,
@@ -439,7 +454,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"treeGreen_small"
-                        }]
+                        }],
+                 "type":"treeGreen_small"
                 }, 
                 {
                  "id":16,
@@ -451,7 +467,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"treeGreen_twigs"
-                        }]
+                        }],
+                 "type":"treeGreen_twigs"
                 }, 
                 {
                  "id":17,
@@ -463,7 +480,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"wireCrooked"
-                        }]
+                        }],
+                 "type":"wireCrooked"
                 }, 
                 {
                  "id":18,
@@ -475,7 +493,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"wireStraight"
-                        }]
+                        }],
+                 "type":"wireStraight"
                 }, 
                 {
                  "id":19,
@@ -487,7 +506,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"tracksLarge"
-                        }]
+                        }],
+                 "type":"tracksLarge"
                 }, 
                 {
                  "id":20,
@@ -499,7 +519,8 @@
                          "name":"key",
                          "type":"string",
                          "value":"tracksSmall"
-                        }]
+                        }],
+                 "type":"tracksSmall"
                 }],
          "tilewidth":64
         }],
