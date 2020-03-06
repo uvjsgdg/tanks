@@ -1,0 +1,29 @@
+{
+    "gameWidth": 6400,
+    "gameHeight": 6400,
+    "tileWidth": 64, 
+    "tileHeight": 64, 
+    "map": {
+        "tilesets": [
+            {
+                "key": "map-tileset-tiny",
+                "file": "map-tileset-tiny.png"
+            }   
+        ],  
+        "tileLayers": [
+            {   
+                "name": "Grass",
+                "tileset": "map-tileset-tiny"
+            },  
+            {   
+                "name": "Sand",
+                "tileset": "map-tileset-tiny"
+            }
+        ]
+    },  
+    "spriteAtlas": {
+        "key": "sprite_atlas",
+        "imageFile": "sprite_atlas.png",
+        "jsonFile": "sprite_atlas.json"
+    },  
+}
