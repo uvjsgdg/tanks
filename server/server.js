@@ -40,9 +40,10 @@ class Server {
             socket.on('disconnect', () => {
                 console.log('[' + id + '] User disconnected!');
                 if (this.connections[id].userName) {
-                    console.log('[' + id + '] DISCONNECT: ' + this.connections[id].userName);
-                    this.game.removeUser(this.connections[id].userName);
-                    delete this.connections[id].userName;
+                    console.log('[' + id + '] DISCONNECT: ' + clientData.userName);
+                    this.game.removeUser(clientData.userName);
+                    delete this.connections[id];
+                    socket.broadcast.emit('serverMessage', { action: 'deletePlayer', data: clientData.userName });
                 }
                 delete this.connections[id];
             });

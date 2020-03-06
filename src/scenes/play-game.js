@@ -11,6 +11,7 @@ export default class PlayGameScene extends Phaser.Scene {
         super({ key: key });
         this.playerID = null;
         this.userName = null;
+        this.players = {};
     }
 
     init () {
@@ -60,6 +61,16 @@ export default class PlayGameScene extends Phaser.Scene {
 
         this.events.on('server-disconnected', () => {
             console.log('WEBSOCKET SERVER TERMINATED CONNECTION!');
+        });
+
+        this.events.on('server-createPlayer', (userName) => {
+            console.log('WEBSOCKET SERVER CREATE PLAYER!');
+            this.players[userName] = { userName: userName };
+        });
+
+        this.events.on('server-deletePlayer', (userName) => {
+            console.log('WEBSOCKET SERVER DELETE PLAYER!');
+            delete this.players[userName];
         });
     }
 
