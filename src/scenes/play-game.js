@@ -21,11 +21,6 @@ export default class PlayGameScene extends Phaser.Scene {
         this.game.serverStatus.style.display = 'block';
     }
 
-    preload () {
-        // load all the resources required for this scene before using them
-        this.loadMap();
-    }
-
     create () {
         // initialize socket session with current scene for event emitters
         this.socketSession = new SocketSession(this);
@@ -119,12 +114,17 @@ export default class PlayGameScene extends Phaser.Scene {
     createControllers () {
     }
 
-    loadMap () {
-        // loading current level data
-        this.load.tilemapTiledJSON(config.map.key, config.map.file);
-    }
-
     createMap () {
+        this.tilemap = this.make.tilemap({ key: config.map.key });
 
+        this.tilesets = {};
+        config.map.tilesets.forEach(tileset => {
+            this.tilesets[tileset.key] = this.tilemap.addTilesetImage(tileset.key);
+        });
+
+        this.tileLayers = {};
+        config.map.tileLayers.forEach(layer => {
+            this.tileLayers[layer.name] = this.tilemap.createDynamicLayer(layer.name, this.tilesets[layer.tileset], 0, 0);
+        });
     }
 };
