@@ -29,9 +29,13 @@ class Server {
 
         this.webSocketServer.on('connection', (socket) => {
             let id = socket.conn.id;
+            let clientData = {
+                id: id,
+                socket: socket,
+            }
             console.log('[' + id + '] User connected!');
 
-            this.connections[id] = { socket: socket };
+            this.connections[id] = clientData;
 
             socket.on('disconnect', () => {
                 console.log('[' + id + '] User disconnected!');
@@ -51,6 +55,25 @@ class Server {
                             c.socket.emit('serverReport', '[' + this.connections[id].userName + '] ' + message);
                         }
                     });
+                }
+                else {
+                    socket.emit('serverReport', 'ERROR! You first need to login using /login');
+                }
+            });
+
+            socket.on('sendMove', (data) => {
+                console.log('[' + id + '] sendMove: ' + message);
+                if (this.connections[id].userName) {
+                    if(data.userName){
+                        if(data.userName != clientData.userName){
+                            socket.emit('serverReport', 'ERROR! Sent data for wrong user');
+                        }
+                    }
+                    else{
+                        data.userName = clientData.userName;
+                    }
+                    clientData.moveData = data;
+                    socket.broadcast.emit('updateMove',data);
                 }
                 else {
                     socket.emit('serverReport', 'ERROR! You first need to login using /login');
@@ -82,7 +105,7 @@ class Server {
                                 c.socket.emit('serverReport', userName + ' just logged in! Welcome!');
                             }
                         });
-                        this.connections[id].userName = userName;
+                        clientData.userName = userName;
                         this.game.addUser(userName);
                         socket.emit('yourUserName', userName);
                         console.log('[' + id + '] LOGGED IN AS [' + userName + ']');
@@ -95,6 +118,7 @@ class Server {
                     console.log('[' + id + '] doLogout: ' + this.connections[id].userName);
                     socket.emit('serverReport', this.connections[id].userName + ', you have been logged out!');
                     this.game.removeUser(this.connections[id].userName);
+                    clientData.userName = null;
                     delete this.connections[id].userName;
                 }
                 else {
