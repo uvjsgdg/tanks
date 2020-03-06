@@ -1,0 +1,7 @@
+{
+    "player": {
+        "frame": "player",
+        "startingX": 200,
+        "startingY": 250
+    }
+}
