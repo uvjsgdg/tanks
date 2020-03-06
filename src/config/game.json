@@ -15,15 +15,27 @@
         "tileLayers": [
             {   
                 "name": "water",
-                "tileset": "landscape_tileset"
+                "tileset": "landscape_tileset",
+                "properties": {
+                    "lookForCollisions": true,
+                    "lookForSlow": false
+                }
             },  
             {   
                 "name": "landscape",
-                "tileset": "landscape_tileset"
+                "tileset": "landscape_tileset",
+                "properties": {
+                    "lookForCollisions": false,
+                    "lookForSlow": true
+                }
             },  
             {   
                 "name": "sand",
-                "tileset": "landscape_tileset"
+                "tileset": "landscape_tileset",
+                "properties": {
+                    "lookForCollisions": false,
+                    "lookForSlow": false
+                }
             }
         ]
     },  

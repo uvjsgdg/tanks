@@ -131,8 +131,14 @@ export default class PlayGameScene extends Phaser.Scene {
     createPlayer () {
         let player = new PlayerSprite(this);
         let barrel = new BarrelSprite(this);
+
         this.add.existing(player);
         this.add.existing(barrel);
+
+        this.input.on('pointermove', function (pointer) {
+            barrel.rotation = Phaser.Math.Angle.Between(player.x, player.y, pointer.x, pointer.y) + (3.14159/2);
+        }, this);
+
     }
 
     createControllers () {
@@ -149,6 +155,10 @@ export default class PlayGameScene extends Phaser.Scene {
         this.tileLayers = {};
         config.map.tileLayers.forEach(layer => {
             this.tileLayers[layer.name] = this.tilemap.createDynamicLayer(layer.name, this.tilesets[layer.tileset], 0, 0);
+
+            if (layer.properties.lookForCollisions) {
+                this.tilemap.setCollisionByProperty({collides: true}, true, true, this.tileLayers[layer.name]);
+            }
         });
     }
 };
