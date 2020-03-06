@@ -34,9 +34,6 @@ export default class SocketSession {
 
         // setup all listeners
         this.listenForServerMessages();
-
-        // send login
-        this.send('doLogin', this.uuid);
     }
 
     // disconnect from server
