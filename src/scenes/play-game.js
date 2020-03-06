@@ -1,4 +1,6 @@
 import SocketSession from '../networking/socket-session';
+import PlayerSprite from '../sprites/player';
+
 import KeyBoardController from '../controllers/keyboard';
 
 export default class PlayGameScene extends Phaser.Scene {
@@ -50,6 +52,8 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     createPlayer () {
+        let player = new PlayerSprite(this);
+        this.add.existing(player);
     }
 
     createControllers () {

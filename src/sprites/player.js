@@ -1,5 +1,5 @@
 import gameConfig from '../config/game.json';
-import playerConfig from '../config/players.json';
+import playerConfig from '../config/player.json';
 
 export default class Player extends Phaser.Physics.Arcade.Sprite{
     constructor (scene, x = playerConfig.player.startingX, y = playerConfig.player.startingY) {

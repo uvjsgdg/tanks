@@ -1,0 +1,7 @@
+{
+    "player": {
+        "frame": "tankBody",
+        "startingX": 200,
+        "startingY": 250
+    }
+}
