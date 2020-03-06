@@ -76,10 +76,10 @@ export default class PlayGameScene extends Phaser.Scene {
                 console.log("Unknown command: " + contents[0]);
                 this.game.appMessage.value = message;
             }
-            else if (this.userName) {
+            else if (this.socketSession.meta.userName) {
                 // Appears to be logged in so send message to server.
                 console.log("MESSAGE: " + message);
-                this.socket.emit('sendMessage', message);
+                this.socketSession.send('sendMessage', message);
             }
             else {
                 // Attempting to talk without being logged in.
