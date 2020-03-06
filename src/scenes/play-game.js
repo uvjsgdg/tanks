@@ -16,6 +16,7 @@ export default class PlayGameScene extends Phaser.Scene {
         this.players = {};
     }
 
+
     init () {
         // Catch AppMessage Input
         this.game.appMessage = document.getElementById('app_message');
@@ -83,6 +84,9 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     update () {
+        if(this.playerController){
+            this.playerController.updateVelocity();
+        }
     }
 
     handleAppMessageKey(e) {
@@ -146,7 +150,7 @@ export default class PlayGameScene extends Phaser.Scene {
         this.add.existing(barrel);
         this.physics.add.existing(barrel);
 
-        let playerController = new PlayerController(this, player);
+        this.playerController = new PlayerController(this, player);
         let barrelController = new BarrelController(this, barrel);
 
         this.cameras.main.startFollow(player);

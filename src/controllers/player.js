@@ -2,6 +2,7 @@ export default class PlayerController {
     constructor (scene, playerSprite) {
         this.player = playerSprite;
         this.scene = scene;
+        this.velocity = 0;
 
         let ee = scene.events;
         ee.on('pressUp',      this.onPressUp,    this);
@@ -13,11 +14,11 @@ export default class PlayerController {
     }
 
     onPressUp() {
-        this.player.setVelocity(Math.sin(this.player.rotation) * 200, Math.cos(this.player.rotation) * -200);
+        this.velocity = 200;
     }
 
     onReleaseUp() {
-        this.player.setVelocity(0, 0);
+        this.velocity = 0;
     }
 
     onPressLeft() {
@@ -34,5 +35,9 @@ export default class PlayerController {
 
     onReleaseRight() {
         this.player.body.angularVelocity = 0;
+    }
+
+    updateVelocity() {
+        this.player.setVelocity(Math.sin(this.player.rotation) * this.velocity, Math.cos(this.player.rotation) * -this.velocity);
     }
 }
