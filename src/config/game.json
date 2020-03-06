@@ -25,5 +25,5 @@
         "key": "sprite_atlas",
         "imageFile": "sprite_atlas.png",
         "jsonFile": "sprite_atlas.json"
-    },  
+    } 
 }

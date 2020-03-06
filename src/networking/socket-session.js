@@ -2,19 +2,25 @@ import io from 'socket.io-client';
 import { v4 as uuidv4 } from 'uuid';
 
 export default class SocketSession {
-    constructor () {
+    constructor (scene) {
         this.meta = {
-            uuid: uuidv4()
+            uuid: uuidv4(),
+            scene: scene
         };
     }
 
+    // get our client UUID
     get uuid () { return this.meta.uuid; }
 
+    // get our server assigned player id
     get playerID () { return this.meta.playerID; }
 
+    // get our user set userName
     get userName () { return this.meta.userName; }
 
+    // connect to server
     connect () {
+        // connect to server
         let wsBase = 'ws://localhost:9000/';
         if (document.location.port < 1024) {
             // Privileged port should use itself for WebSocket
@@ -23,19 +29,26 @@ export default class SocketSession {
         console.log("USING WEBSOCKET: " + wsBase);
         this.socket = io(wsBase);
 
+        // setup all listeners
         this.listenForMyID();
-
         this.listenForMyUserName();
-
         this.listenForServerReport();
 
-        this.socket.emit('doLogin', this.meta.uuid);
+        // send login
+        this.send('doLogin', this.meta.uuid);
     }
 
+    // disconnect from server
     disconnect () {
-        this.socket.emit('doLogout', this.uuid);
+        this.send('doLogout', this.uuid);
     }
 
+    // send communication to server
+    send (method, data) {
+        this.socket.emit(method, data);
+    }
+
+    // listen for yourID events from server
     listenForMyID () {
         this.socket.on('yourID', (playerID) => {
             console.log('yourID:', playerID);
@@ -43,6 +56,7 @@ export default class SocketSession {
         });
     }
 
+    // listen for yourUserName from server
     listenForMyUserName () {
         this.socket.on('yourUserName', (userName) => {
             console.log('yourUserName:', userName);
@@ -50,6 +64,7 @@ export default class SocketSession {
         });
     }
 
+    // listen for serverReport events from server
     listenForServerReport () {
         this.socket.on('serverReport', (line) => {
             console.log('SERVER: ' + line);
