@@ -4,6 +4,13 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     init () {
+        // Catch AppMessage Input
+        this.game.appMessage = document.getElementById('app_message');
+        this.game.appMessage.addEventListener('keypress', (e) => this.handleAppMessageKey(e));
+        this.game.appMessage.style.display = 'block';
+        // Catch ServerStatus
+        this.game.serverStatus = document.getElementById('server_status');
+        this.game.serverStatus.style.display = 'block';
     }
 
     preload () {
@@ -53,5 +60,19 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     update () {
+    }
+
+    handleAppMessageKey(e) {
+        let message = this.game.appMessage.value;
+        if (e == null)
+            return;
+        if (message == '')
+            return;
+        if (e.which == 13 || e.keyCode == 13 || e.charCode == 13) {
+            console.log("COMMAND LINE: " + message);
+            var contents = message.split(" ");
+            this.game.appMessage.value = '';
+            // Parse contents for commands
+        }
     }
 };
