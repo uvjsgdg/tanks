@@ -35,7 +35,7 @@ export default class SocketSession {
         });
         this.socket.on('disconnect', () => {
             console.log('WEBSOCKET SERVER TERMINATED CONNECTION!');
-            scene.events.emit('server-disconnected', {});
+            this.scene.events.emit('server-disconnected');
         });
     }
 };
