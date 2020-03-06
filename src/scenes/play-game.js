@@ -148,6 +148,8 @@ export default class PlayGameScene extends Phaser.Scene {
 
         let playerController = new PlayerController(this, player);
         let barrelController = new BarrelController(this, barrel);
+
+        this.cameras.main.startFollow(player);
     }
 
     createMap () {
