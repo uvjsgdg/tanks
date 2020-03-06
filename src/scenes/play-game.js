@@ -1,3 +1,5 @@
+import config from '../config/game';
+
 import SocketSession from '../networking/socket-session';
 import PlayerSprite from '../sprites/player';
 
@@ -104,7 +106,8 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     loadMap () {
-
+        // loading current level data
+        this.load.tilemapTiledJSON(config.map.key, config.map.file);
     }
 
     createMap () {

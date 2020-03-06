@@ -4,6 +4,8 @@
     "tileWidth": 64, 
     "tileHeight": 64, 
     "map": {
+        "key": "map",
+        "file": "map.json",
         "tilesets": [
             {
                 "key": "map-tileset-tiny",
