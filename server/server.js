@@ -73,11 +73,21 @@ class Server {
                         data.userName = clientData.userName;
                     }
                     clientData.moveData = data;
-                    socket.broadcast.emit('updateMove',data);
+                    socket.broadcast.emit('playerMove',data);
                 }
                 else {
                     socket.emit('serverReport', 'ERROR! You first need to login using /login');
                 }
+            });
+
+            socket.on('getPlayerMovements', (fn) => {
+                let playerData = [];
+                Object.values(this.connections).forEach((c) => {
+                    if (c.moveData) {
+                        playerData.push(c.moveData);
+                    }
+                });
+                fn(playerData);
             });
 
             socket.on('sendAttack', (data) => {
@@ -127,9 +137,20 @@ class Server {
                         clientData.userName = userName;
                         this.game.addUser(userName);
                         socket.emit('yourUserName', userName);
+                        socket.broadcast.emit('createPlayer',username);
                         console.log('[' + id + '] LOGGED IN AS [' + userName + ']');
                     }
                 }
+            });
+
+            socket.on('getPlayers', (fn) => {
+                let players = [];
+                Object.values(this.connections).forEach((c) => {
+                    if (c.userName) {
+                        players.push(c.userName);
+                    }
+                });
+                fn(players);
             });
 
             socket.on('doLogout', () => {
