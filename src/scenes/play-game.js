@@ -18,6 +18,7 @@ export default class PlayGameScene extends Phaser.Scene {
 
     preload () {
         // load all the resources required for this scene before using them
+        this.loadMap();
     }
 
     create () {
@@ -25,6 +26,8 @@ export default class PlayGameScene extends Phaser.Scene {
         this.socketSession = new SocketSession(this);
 
         this.socketSession.connect();
+
+        this.createMap();
 
         this.physics.world.setBoundsCollision(true, true, true, true);
         this.createPlayer();
@@ -53,5 +56,13 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     createControllers () {
+    }
+
+    loadMap () {
+
+    }
+
+    createMap () {
+
     }
 };
