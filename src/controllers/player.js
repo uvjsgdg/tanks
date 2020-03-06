@@ -13,7 +13,7 @@ export default class PlayerController {
     }
 
     onPressUp() {
-        this.player.setVelocity(0, 200);
+        this.player.setVelocity(Math.sin(this.player.rotation) * 200, Math.cos(this.player.rotation) * -200);
     }
 
     onReleaseUp() {
@@ -21,18 +21,18 @@ export default class PlayerController {
     }
 
     onPressLeft() {
-        this.player.rotation += 0.2;
+        this.player.body.angularVelocity = -150;
     }
 
     onReleaseLeft() {
-        this.player.rotation = 0;
+        this.player.body.angularVelocity = 0;
     }
 
     onPressRight() {
-        this.player.rotation -= 0.2;
+        this.player.body.angularVelocity = 150;
     }
 
     onReleaseRight() {
-        this.player.rotation = 0;
+        this.player.body.angularVelocity = 0;
     }
 }
