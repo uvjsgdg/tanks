@@ -9,6 +9,8 @@ import KeyBoardController from '../controllers/keyboard';
 export default class PlayGameScene extends Phaser.Scene {
     constructor (config, key = 'PlayGame') {
         super({ key: key });
+        this.playerID = null;
+        this.userName = null;
     }
 
     init () {
@@ -36,7 +38,7 @@ export default class PlayGameScene extends Phaser.Scene {
 
         this.events.on('server-yourUserName', (userName) => {
             console.log('Server Logged In With:', userName);
-            this.socketSession.meta.userName = userName;
+            this.userName = userName;
             this.appendServerStatus('You are logged in as: ' + userName);
         });
 
@@ -83,7 +85,7 @@ export default class PlayGameScene extends Phaser.Scene {
                 console.log("Unknown command: " + contents[0]);
                 this.game.appMessage.value = message;
             }
-            else if (this.socketSession.meta.userName) {
+            else if (this.userName) {
                 // Appears to be logged in so send message to server.
                 console.log("MESSAGE: " + message);
                 this.socketSession.send('sendMessage', message);
