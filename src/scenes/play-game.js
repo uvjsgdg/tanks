@@ -61,11 +61,6 @@ export default class PlayGameScene extends Phaser.Scene {
         this.events.on('server-disconnected', () => {
             console.log('WEBSOCKET SERVER TERMINATED CONNECTION!');
         });
-
-        this.events.on('server-serverMessage', (message) => {
-            console.log('WEBSOCKET SERVER MESSAGE');
-            this.appendServerStatus(message);
-        });
     }
 
     update () {
