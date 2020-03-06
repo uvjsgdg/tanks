@@ -50,9 +50,7 @@ export default class SocketSession {
     }
 
     listenForServerMessages () {
-        this.socket.on('serverMessage', (jsonEncodedString) => {
-            let message = JSON.parse(jsonEncodedString);
-
+        this.socket.on('serverMessage', (message) => {
             console.log('serverMessage:', message);
 
             this.scene.events.emit(`server-${message.action}`, message.data);
