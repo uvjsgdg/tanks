@@ -133,7 +133,7 @@ class Server {
                 }
             });
 
-            socket.on('getPlayers', (fn) => {
+            socket.on('getPlayers', () => {
                 let players = [];
                 Object.values(this.connections).forEach((c) => {
                     if (c.userName) {
@@ -145,7 +145,7 @@ class Server {
                         }
                     }
                 });
-                fn(players);
+                socket.emit('players',players);
             });
 
             socket.on('doLogout', () => {
