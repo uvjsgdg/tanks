@@ -26,7 +26,7 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <true/>
+        <false/>
         <key>shapeDebug</key>
         <false/>
         <key>dpi</key>
@@ -108,7 +108,7 @@
             <key>sizeConstraints</key>
             <enum type="AlgorithmSettings::SizeConstraints">AnySize</enum>
             <key>forceSquared</key>
-            <false/>
+            <true/>
             <key>maxRects</key>
             <struct type="AlgorithmMaxRectsSettings">
                 <key>heuristic</key>
@@ -151,7 +151,7 @@
         <key>autoAliasEnabled</key>
         <true/>
         <key>trimSpriteNames</key>
-        <false/>
+        <true/>
         <key>prependSmartFolderName</key>
         <false/>
         <key>autodetectAnimations</key>
@@ -181,6 +181,35 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
+            <key type="filename">spriteatlas_parts/barrelGreen.png</key>
+            <key type="filename">spriteatlas_parts/barrelRed.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>5,7,10,14</rect>
+                <key>scale9Paddings</key>
+                <rect>5,7,10,14</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/barricadeMetal.png</key>
+            <key type="filename">spriteatlas_parts/barricadeWood.png</key>
+            <key type="filename">spriteatlas_parts/crateWood.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,7,14,14</rect>
+                <key>scale9Paddings</key>
+                <rect>7,7,14,14</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">spriteatlas_parts/bullet1.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -276,6 +305,48 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">spriteatlas_parts/gemBlue.png</key>
+            <key type="filename">spriteatlas_parts/gemGreen.png</key>
+            <key type="filename">spriteatlas_parts/gemOrange.png</key>
+            <key type="filename">spriteatlas_parts/gemYellow.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,7,16,14</rect>
+                <key>scale9Paddings</key>
+                <rect>8,7,16,14</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/oilSpill_large.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>13,13,25,25</rect>
+                <key>scale9Paddings</key>
+                <rect>13,13,25,25</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/oilSpill_small.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,4,7,7</rect>
+                <key>scale9Paddings</key>
+                <rect>4,4,7,7</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
             <key type="filename">spriteatlas_parts/tankBarrel.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
@@ -302,6 +373,100 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
+            <key type="filename">spriteatlas_parts/tracksLarge.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,13,21,26</rect>
+                <key>scale9Paddings</key>
+                <rect>10,13,21,26</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/tracksSmall.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,13,19,26</rect>
+                <key>scale9Paddings</key>
+                <rect>9,13,19,26</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/treeBrown_large.png</key>
+            <key type="filename">spriteatlas_parts/treeGreen_large.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9Paddings</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/treeBrown_small.png</key>
+            <key type="filename">spriteatlas_parts/treeGreen_small.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>9,9,18,18</rect>
+                <key>scale9Paddings</key>
+                <rect>9,9,18,18</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/treeBrown_twigs.png</key>
+            <key type="filename">spriteatlas_parts/treeGreen_twigs.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>7,6,13,11</rect>
+                <key>scale9Paddings</key>
+                <rect>7,6,13,11</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/wireCrooked.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>11,12,22,24</rect>
+                <key>scale9Paddings</key>
+                <rect>11,12,22,24</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">spriteatlas_parts/wireStraight.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,18,9,35</rect>
+                <key>scale9Paddings</key>
+                <rect>4,18,9,35</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
         </map>
         <key>fileList</key>
         <array>
@@ -318,6 +483,27 @@
             <filename>spriteatlas_parts/explosionSmoke5.png</filename>
             <filename>spriteatlas_parts/tankBarrel.png</filename>
             <filename>spriteatlas_parts/tankBody.png</filename>
+            <filename>spriteatlas_parts/barrelGreen.png</filename>
+            <filename>spriteatlas_parts/barrelRed.png</filename>
+            <filename>spriteatlas_parts/barricadeMetal.png</filename>
+            <filename>spriteatlas_parts/barricadeWood.png</filename>
+            <filename>spriteatlas_parts/crateWood.png</filename>
+            <filename>spriteatlas_parts/gemBlue.png</filename>
+            <filename>spriteatlas_parts/gemGreen.png</filename>
+            <filename>spriteatlas_parts/gemOrange.png</filename>
+            <filename>spriteatlas_parts/gemYellow.png</filename>
+            <filename>spriteatlas_parts/oilSpill_large.png</filename>
+            <filename>spriteatlas_parts/oilSpill_small.png</filename>
+            <filename>spriteatlas_parts/tracksLarge.png</filename>
+            <filename>spriteatlas_parts/tracksSmall.png</filename>
+            <filename>spriteatlas_parts/treeBrown_large.png</filename>
+            <filename>spriteatlas_parts/treeBrown_small.png</filename>
+            <filename>spriteatlas_parts/treeBrown_twigs.png</filename>
+            <filename>spriteatlas_parts/treeGreen_large.png</filename>
+            <filename>spriteatlas_parts/treeGreen_small.png</filename>
+            <filename>spriteatlas_parts/treeGreen_twigs.png</filename>
+            <filename>spriteatlas_parts/wireCrooked.png</filename>
+            <filename>spriteatlas_parts/wireStraight.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

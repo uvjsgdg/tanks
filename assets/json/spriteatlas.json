@@ -4,76 +4,76 @@
 			"image": "spriteatlas.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 117,
-				"h": 319
+				"w": 271,
+				"h": 271
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "explosion3.png",
+					"filename": "treeBrown_large",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
 						"w": 64,
-						"h": 63
+						"h": 64
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
 						"w": 64,
-						"h": 63
+						"h": 64
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
 						"w": 64,
-						"h": 63
+						"h": 64
 					}
 				},
 				{
-					"filename": "explosion4.png",
+					"filename": "treeGreen_large",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 46,
-						"h": 45
+						"w": 64,
+						"h": 64
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 46,
-						"h": 45
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 67,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "explosion3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 63
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 63
 					},
 					"frame": {
 						"x": 67,
 						"y": 1,
-						"w": 46,
-						"h": 45
+						"w": 64,
+						"h": 63
 					}
 				},
 				{
-					"filename": "explosionSmoke4.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 46,
-						"h": 45
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 46,
-						"h": 45
-					},
-					"frame": {
-						"x": 67,
-						"y": 48,
-						"w": 46,
-						"h": 45
-					}
-				},
-				{
-					"filename": "explosionSmoke3.png",
+					"filename": "explosionSmoke3",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -88,198 +88,639 @@
 					},
 					"frame": {
 						"x": 1,
+						"y": 133,
+						"w": 63,
+						"h": 63
+					}
+				},
+				{
+					"filename": "explosion1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 60,
+						"h": 60
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 60,
+						"h": 60
+					},
+					"frame": {
+						"x": 67,
 						"y": 66,
-						"w": 63,
-						"h": 63
+						"w": 60,
+						"h": 60
 					}
 				},
 				{
-					"filename": "tankBody.png",
+					"filename": "explosionSmoke1",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 38,
-						"h": 38
+						"w": 60,
+						"h": 60
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 38,
-						"h": 38
+						"w": 60,
+						"h": 60
+					},
+					"frame": {
+						"x": 133,
+						"y": 1,
+						"w": 60,
+						"h": 60
+					}
+				},
+				{
+					"filename": "explosion2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 57,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 57,
+						"h": 56
+					},
+					"frame": {
+						"x": 1,
+						"y": 198,
+						"w": 57,
+						"h": 56
+					}
+				},
+				{
+					"filename": "explosionSmoke2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 57,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 57,
+						"h": 56
+					},
+					"frame": {
+						"x": 195,
+						"y": 1,
+						"w": 57,
+						"h": 56
+					}
+				},
+				{
+					"filename": "tankBarrel",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 30
+					},
+					"frame": {
+						"x": 254,
+						"y": 1,
+						"w": 16,
+						"h": 30
+					}
+				},
+				{
+					"filename": "wireStraight",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 17,
+						"h": 70
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 70
 					},
 					"frame": {
 						"x": 66,
-						"y": 95,
+						"y": 133,
+						"w": 17,
+						"h": 70
+					}
+				},
+				{
+					"filename": "explosion5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 53,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 53,
+						"h": 52
+					},
+					"frame": {
+						"x": 85,
+						"y": 128,
+						"w": 53,
+						"h": 52
+					}
+				},
+				{
+					"filename": "explosionSmoke5",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 53,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 53,
+						"h": 52
+					},
+					"frame": {
+						"x": 85,
+						"y": 182,
+						"w": 53,
+						"h": 52
+					}
+				},
+				{
+					"filename": "tracksLarge",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 41,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 41,
+						"h": 52
+					},
+					"frame": {
+						"x": 129,
+						"y": 66,
+						"w": 41,
+						"h": 52
+					}
+				},
+				{
+					"filename": "tracksSmall",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 37,
+						"h": 52
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 37,
+						"h": 52
+					},
+					"frame": {
+						"x": 140,
+						"y": 120,
+						"w": 37,
+						"h": 52
+					}
+				},
+				{
+					"filename": "oilSpill_large",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 50
+					},
+					"frame": {
+						"x": 140,
+						"y": 174,
+						"w": 50,
+						"h": 50
+					}
+				},
+				{
+					"filename": "wireCrooked",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 44,
+						"h": 48
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 44,
+						"h": 48
+					},
+					"frame": {
+						"x": 172,
+						"y": 63,
+						"w": 44,
+						"h": 48
+					}
+				},
+				{
+					"filename": "explosion4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 46,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 46,
+						"h": 45
+					},
+					"frame": {
+						"x": 218,
+						"y": 59,
+						"w": 46,
+						"h": 45
+					}
+				},
+				{
+					"filename": "explosionSmoke4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 46,
+						"h": 45
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 46,
+						"h": 45
+					},
+					"frame": {
+						"x": 179,
+						"y": 113,
+						"w": 46,
+						"h": 45
+					}
+				},
+				{
+					"filename": "tankBody",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 38,
+						"h": 38
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 38,
+						"h": 38
+					},
+					"frame": {
+						"x": 227,
+						"y": 106,
 						"w": 38,
 						"h": 38
 					}
 				},
 				{
-					"filename": "bullet1.png",
+					"filename": "treeBrown_small",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 8,
+						"w": 36,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 36
+					},
+					"frame": {
+						"x": 192,
+						"y": 160,
+						"w": 36,
+						"h": 36
+					}
+				},
+				{
+					"filename": "treeGreen_small",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 36
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 36
+					},
+					"frame": {
+						"x": 192,
+						"y": 198,
+						"w": 36,
+						"h": 36
+					}
+				},
+				{
+					"filename": "gemBlue",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 28
+					},
+					"frame": {
+						"x": 230,
+						"y": 146,
+						"w": 32,
+						"h": 28
+					}
+				},
+				{
+					"filename": "gemGreen",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 28
+					},
+					"frame": {
+						"x": 230,
+						"y": 176,
+						"w": 32,
+						"h": 28
+					}
+				},
+				{
+					"filename": "gemOrange",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 28
+					},
+					"frame": {
+						"x": 230,
+						"y": 206,
+						"w": 32,
+						"h": 28
+					}
+				},
+				{
+					"filename": "oilSpill_small",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
 						"h": 14
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 8,
+						"w": 14,
 						"h": 14
 					},
 					"frame": {
-						"x": 106,
-						"y": 95,
-						"w": 8,
+						"x": 1,
+						"y": 256,
+						"w": 14,
 						"h": 14
 					}
 				},
 				{
-					"filename": "explosion1.png",
+					"filename": "barrelGreen",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 60,
-						"h": 60
+						"w": 20,
+						"h": 28
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 60,
-						"h": 60
-					},
-					"frame": {
-						"x": 1,
-						"y": 131,
-						"w": 60,
-						"h": 60
-					}
-				},
-				{
-					"filename": "explosion5.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 53,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 53,
-						"h": 52
-					},
-					"frame": {
-						"x": 63,
-						"y": 135,
-						"w": 53,
-						"h": 52
-					}
-				},
-				{
-					"filename": "explosionSmoke5.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 53,
-						"h": 52
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 53,
-						"h": 52
-					},
-					"frame": {
-						"x": 63,
-						"y": 189,
-						"w": 53,
-						"h": 52
-					}
-				},
-				{
-					"filename": "explosionSmoke1.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 60,
-						"h": 60
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 60,
-						"h": 60
-					},
-					"frame": {
-						"x": 1,
-						"y": 193,
-						"w": 60,
-						"h": 60
-					}
-				},
-				{
-					"filename": "tankBarrel.png",
-					"rotated": true,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 16,
-						"h": 30
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 16,
-						"h": 30
-					},
-					"frame": {
-						"x": 63,
-						"y": 243,
-						"w": 16,
-						"h": 30
-					}
-				},
-				{
-					"filename": "explosion2.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 57,
-						"h": 56
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 57,
-						"h": 56
-					},
-					"frame": {
-						"x": 1,
-						"y": 255,
-						"w": 57,
-						"h": 56
-					}
-				},
-				{
-					"filename": "explosionSmoke2.png",
-					"rotated": true,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 57,
-						"h": 56
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 57,
-						"h": 56
+						"w": 20,
+						"h": 28
 					},
 					"frame": {
 						"x": 60,
-						"y": 261,
-						"w": 57,
-						"h": 56
+						"y": 205,
+						"w": 20,
+						"h": 28
+					}
+				},
+				{
+					"filename": "gemYellow",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 28
+					},
+					"frame": {
+						"x": 140,
+						"y": 226,
+						"w": 32,
+						"h": 28
+					}
+				},
+				{
+					"filename": "barrelRed",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 28
+					},
+					"frame": {
+						"x": 60,
+						"y": 235,
+						"w": 20,
+						"h": 28
+					}
+				},
+				{
+					"filename": "barricadeMetal",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 28
+					},
+					"frame": {
+						"x": 82,
+						"y": 236,
+						"w": 28,
+						"h": 28
+					}
+				},
+				{
+					"filename": "treeBrown_twigs",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 26,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 26,
+						"h": 22
+					},
+					"frame": {
+						"x": 112,
+						"y": 236,
+						"w": 26,
+						"h": 22
+					}
+				},
+				{
+					"filename": "bullet1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 8,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 8,
+						"h": 14
+					},
+					"frame": {
+						"x": 17,
+						"y": 256,
+						"w": 8,
+						"h": 14
+					}
+				},
+				{
+					"filename": "barricadeWood",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 28
+					},
+					"frame": {
+						"x": 174,
+						"y": 236,
+						"w": 28,
+						"h": 28
+					}
+				},
+				{
+					"filename": "crateWood",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 28
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 28
+					},
+					"frame": {
+						"x": 204,
+						"y": 236,
+						"w": 28,
+						"h": 28
+					}
+				},
+				{
+					"filename": "treeGreen_twigs",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 26,
+						"h": 22
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 26,
+						"h": 22
+					},
+					"frame": {
+						"x": 234,
+						"y": 236,
+						"w": 26,
+						"h": 22
 					}
 				}
 			]
@@ -288,6 +729,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:33c5df3852da046ed589f1e29a16933a:055c39004aabc016fcc3ba8761f7e415:1fd55e2fd82dd1a0f07657f786644695$"
+		"smartupdate": "$TexturePacker:SmartUpdate:69acecca11b6b91f3e8c6f4fb429695a:19c67502178d074794ea3132b98f74b0:1fd55e2fd82dd1a0f07657f786644695$"
 	}
 }
