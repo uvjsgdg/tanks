@@ -6,7 +6,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
         super(scene, x, y, gameConfig.spriteAtlas.key, playerConfig.player.frame);
 
         this.controls = {
-            target: scene.cursor,
+            target: scene.cursor
         };
 
         this.config = playerConfig.player;

@@ -5,6 +5,8 @@
         "startingY": 250
     },
     "barrel": {
-        "frame": "tankBarrel"
+        "frame": "tankBarrel",
+        "originX": 0.5,
+        "originY": 0.8
     }
 }
