@@ -8,18 +8,18 @@
         "file": "map.json",
         "tilesets": [
             {
-                "key": "map-tileset-tiny",
-                "file": "map-tileset-tiny.png"
+                "key": "landscape_tileset",
+                "file": "landscape_tileset.png"
             }   
         ],  
         "tileLayers": [
             {   
-                "name": "Grass",
-                "tileset": "map-tileset-tiny"
+                "name": "landscape",
+                "tileset": "landscape_tileset"
             },  
             {   
-                "name": "Sand",
-                "tileset": "map-tileset-tiny"
+                "name": "sand",
+                "tileset": "landscape_tileset"
             }
         ]
     },  
