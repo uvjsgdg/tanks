@@ -15,12 +15,18 @@ export default class SocketSession {
     get userName () { return this.meta.userName; }
 
     connect () {
-        this.socket = io('http://localhost:9000/');
+        let wsBase = 'ws://localhost:9000/';
+        if (document.location.port < 1024) {
+            // Privileged port should use itself for WebSocket
+            wsBase = document.location.href;
+        }
+        console.log("USING WEBSOCKET: " + wsBase);
+        this.socket = io(wsBase);
 
         this.listenForMyID();
 
         this.listenForMyUserName();
-        
+
         this.listenForServerReport();
 
         this.socket.emit('doLogin', this.meta.uuid);
