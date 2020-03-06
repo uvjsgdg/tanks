@@ -83,6 +83,9 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     update () {
+        // Force barrel align with tank
+        this.mybarrel.x = this.myplayer.body.x + 16;
+        this.mybarrel.y = this.myplayer.body.y + 16;
     }
 
     handleAppMessageKey(e) {
@@ -139,7 +142,9 @@ export default class PlayGameScene extends Phaser.Scene {
 
     createPlayer () {
         let player = new PlayerSprite(this);
+        this.myplayer = player;
         let barrel = new BarrelSprite(this);
+        this.mybarrel = barrel;
 
         this.add.existing(player);
         this.physics.add.existing(player);
