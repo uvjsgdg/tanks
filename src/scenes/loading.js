@@ -10,6 +10,9 @@ import gameConfig from '../config/game.json';
 // require('../../assets/sounds/sound.wav');
 // require('../../assets/json/tilemap.json');
 // require('../../assets/images/tileset.png');
+require('../../assets/json/map.json');
+require('../../assets/json/spriteatlas.json');
+require('../../assets/images/spriteatlas.png');
 require('../../assets/images/play.png');
 
 export default class LoadingScene extends Phaser.Scene {
@@ -36,6 +39,9 @@ export default class LoadingScene extends Phaser.Scene {
                 urls: ['fonts.css']
             }
         }); */
+
+        // load sprite atlas
+        this.load.atlas(gameConfig.spriteAtlas.key, gameConfig.spriteAtlas.imageFile, gameConfig.spriteAtlas.jsonFile);
     }
 
     webfontsloaded () {
