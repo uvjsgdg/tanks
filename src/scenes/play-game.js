@@ -6,7 +6,7 @@ import BarrelSprite from '../sprites/tankBarrel';
 
 import KeyBoardController from '../controllers/keyboard';
 import PlayerController from '../controllers/player';
-// import BarrelController from '../controllers/barrel';
+import BarrelController from '../controllers/barrel';
 
 export default class PlayGameScene extends Phaser.Scene {
     constructor (config, key = 'PlayGame') {
@@ -146,12 +146,8 @@ export default class PlayGameScene extends Phaser.Scene {
         this.add.existing(barrel);
         this.physics.add.existing(barrel);
 
-        this.input.on('pointermove', function (pointer) {
-            barrel.rotation = Phaser.Math.Angle.Between(player.x, player.y, pointer.x, pointer.y) + (3.14159/2);
-        }, this);
-
         let playerController = new PlayerController(this, player);
-        // let barrelController = new BarrelController(this, barrel);
+        let barrelController = new BarrelController(this, barrel);
     }
 
     createMap () {
