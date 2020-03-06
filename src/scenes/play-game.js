@@ -138,6 +138,10 @@ export default class PlayGameScene extends Phaser.Scene {
         this.tileLayers = {};
         config.map.tileLayers.forEach(layer => {
             this.tileLayers[layer.name] = this.tilemap.createDynamicLayer(layer.name, this.tilesets[layer.tileset], 0, 0);
+
+            if (layer.properties.lookForCollisions) {
+                this.tilemap.setCollisionByProperty({collides: true}, true, true, this.tileLayers[layer.name]);
+            }
         });
     }
 };
