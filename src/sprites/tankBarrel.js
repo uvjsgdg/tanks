@@ -1,7 +1,7 @@
 import gameConfig from '../config/game.json';
 import playerConfig from '../config/player.json';
 
-export default class TankBarrel extends Phaser.Physics.Arcade.Sprite{
+export default class TankBarrel extends Phaser.Physics.Arcade.Sprite {
     constructor (scene,
         x = playerConfig.player.startingX,
         y = playerConfig.player.startingY,
@@ -19,5 +19,6 @@ export default class TankBarrel extends Phaser.Physics.Arcade.Sprite{
         };
 
         this.config = playerConfig.barrel;
+        this.scene = scene;
     }
 }
