@@ -1,3 +1,5 @@
+import SocketSession from '../networking/socket-session';
+
 export default class PlayGameScene extends Phaser.Scene {
     constructor (config, key = 'PlayGame') {
         super({ key: key });
