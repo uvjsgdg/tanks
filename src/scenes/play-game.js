@@ -89,8 +89,8 @@ export default class PlayGameScene extends Phaser.Scene {
         }
 
         // Force barrel align with tank
-        this.mybarrel.x = this.myplayer.body.x + 16;
-        this.mybarrel.y = this.myplayer.body.y + 16;
+        this.mybarrel.x = this.myplayer.x;
+        this.mybarrel.y = this.myplayer.y;
     }
 
     handleAppMessageKey(e) {
