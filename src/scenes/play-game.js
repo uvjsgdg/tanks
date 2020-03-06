@@ -85,12 +85,12 @@ export default class PlayGameScene extends Phaser.Scene {
 
     update () {
         if(this.playerController){
-            this.playerController.updateVelocity();
+            this.playerController.update();
         }
 
-        // Force barrel align with tank
-        this.mybarrel.x = this.myplayer.x;
-        this.mybarrel.y = this.myplayer.y;
+        if(this.barrelController){
+            this.barrelController.update();
+        }
     }
 
     handleAppMessageKey(e) {
@@ -157,7 +157,7 @@ export default class PlayGameScene extends Phaser.Scene {
         this.physics.add.existing(barrel);
 
         this.playerController = new PlayerController(this, player);
-        let barrelController = new BarrelController(this, barrel);
+        this.barrelController = new BarrelController(this, barrel);
 
         this.cameras.main.startFollow(player);
     }

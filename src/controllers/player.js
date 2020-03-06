@@ -5,12 +5,12 @@ export default class PlayerController {
         this.velocity = 0;
 
         let ee = scene.events;
-        ee.on('pressUp',      this.onPressUp,    this);
-        ee.on('releaseUp',    this.onReleaseUp,      this);
-        ee.on('pressLeft',    this.onPressLeft,  this);
-        ee.on('releaseLeft',  this.onReleaseLeft,    this);
-        ee.on('pressRight',   this.onPressRight, this);
-        ee.on('releaseRight', this.onReleaseRight,   this);
+        ee.on('pressUp',      this.onPressUp,      this);
+        ee.on('releaseUp',    this.onReleaseUp,    this);
+        ee.on('pressLeft',    this.onPressLeft,    this);
+        ee.on('releaseLeft',  this.onReleaseLeft,  this);
+        ee.on('pressRight',   this.onPressRight,   this);
+        ee.on('releaseRight', this.onReleaseRight, this);
     }
 
     onPressUp() {
@@ -37,7 +37,7 @@ export default class PlayerController {
         this.player.body.angularVelocity = 0;
     }
 
-    updateVelocity() {
+    update() {
         this.player.setVelocity(Math.sin(this.player.rotation) * this.velocity, Math.cos(this.player.rotation) * -this.velocity);
     }
 }
