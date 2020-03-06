@@ -36,12 +36,12 @@ export default class SocketSession {
         this.listenForServerMessages();
 
         // send login
-        this.send('doLogin', this.meta.uuid);
+        this.send('doLogin', this.uuid());
     }
 
     // disconnect from server
     disconnect () {
-        this.send('doLogout', this.uuid);
+        this.send('doLogout', this.uuid());
     }
 
     // send communication to server
@@ -50,9 +50,11 @@ export default class SocketSession {
     }
 
     listenForServerMessages () {
-        this.socket.on('serverMessage', (jsonEncodedString) => {
-            let message = JSON.parse(jsonEncodedString);
-
+        this.socket.on('disconnect', () => {
+            console.log('WEBSOCKET SERVER TERMINATED CONNECTION!');
+            scene.events.emit('server-disconnected', {});
+        });
+        this.socket.on('serverMessage', (message) => {
             console.log('serverMessage:', message);
 
             this.scene.events.emit(`server-${message.action}`, message.data);
