@@ -35,6 +35,10 @@ export default class PlayGameScene extends Phaser.Scene {
         this.createPlayer();
         this.createControllers();
         this.keyboardsniffer = new KeyBoardController(this);
+
+        this.events.on('server-disconnected', () => {
+            console.log('WEBSOCKET SERVER TERMINATED CONNECTION!');
+        });
     }
 
     update () {
