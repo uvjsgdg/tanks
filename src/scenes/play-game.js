@@ -42,6 +42,7 @@ export default class PlayGameScene extends Phaser.Scene {
         this.events.on('server-yourUserName', (userName) => {
             console.log('Server Logged In With:', userName);
             this.socketSession.meta.userName = userName;
+            this.appendServerStatus('You are logged in as: ' + userName);
         });
 
         this.events.on('server-disconnected', () => {
