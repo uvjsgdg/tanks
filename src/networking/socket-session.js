@@ -36,12 +36,12 @@ export default class SocketSession {
         this.listenForServerMessages();
 
         // send login
-        this.send('doLogin', this.uuid());
+        this.send('doLogin', this.uuid);
     }
 
     // disconnect from server
     disconnect () {
-        this.send('doLogout', this.uuid());
+        this.send('doLogout', this.uuid);
     }
 
     // send communication to server
