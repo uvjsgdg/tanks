@@ -59,9 +59,10 @@ export default class PlayGameScene extends Phaser.Scene {
     }
 
     create () {
-        this.socketSession = new SocketSession();
+        // initialize socket session with current scene for event emitters
+        this.socketSession = new SocketSession(this);
 
-        this.socketSession.connect(this);
+        this.socketSession.connect();
     }
 
     update () {

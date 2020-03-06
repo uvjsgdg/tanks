@@ -18,6 +18,9 @@ export default class SocketSession {
     // get our user set userName
     get userName () { return this.meta.userName; }
 
+    // get our connect scene
+    get scene () { return this.meta.scene; }
+
     // connect to server
     connect () {
         // connect to server
@@ -30,9 +33,7 @@ export default class SocketSession {
         this.socket = io(wsBase);
 
         // setup all listeners
-        this.listenForMyID();
-        this.listenForMyUserName();
-        this.listenForServerReport();
+        this.listenForServerMessages();
 
         // send login
         this.send('doLogin', this.meta.uuid);
@@ -48,26 +49,13 @@ export default class SocketSession {
         this.socket.emit(method, data);
     }
 
-    // listen for yourID events from server
-    listenForMyID () {
-        this.socket.on('yourID', (playerID) => {
-            console.log('yourID:', playerID);
-            this.meta.playerID = playerID;
-        });
-    }
+    listenForServerMessages () {
+        this.socket.on('serverMessage', (jsonEncodedString) => {
+            let message = JSON.parse(jsonEncodedString);
 
-    // listen for yourUserName from server
-    listenForMyUserName () {
-        this.socket.on('yourUserName', (userName) => {
-            console.log('yourUserName:', userName);
-            this.meta.userName = userName;
-        });
-    }
+            console.log('serverMessage:', message);
 
-    // listen for serverReport events from server
-    listenForServerReport () {
-        this.socket.on('serverReport', (line) => {
-            console.log('SERVER: ' + line);
+            this.scene.emit(message.action, message.data);
         });
     }
 };
