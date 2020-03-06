@@ -5,6 +5,8 @@ import PlayerSprite from '../sprites/player';
 import BarrelSprite from '../sprites/tankBarrel';
 
 import KeyBoardController from '../controllers/keyboard';
+import PlayerController from '../controllers/player';
+// import BarrelController from '../controllers/barrel';
 
 export default class PlayGameScene extends Phaser.Scene {
     constructor (config, key = 'PlayGame') {
@@ -34,7 +36,6 @@ export default class PlayGameScene extends Phaser.Scene {
 
         this.physics.world.setBoundsCollision(true, true, true, true);
         this.createPlayer();
-        this.createControllers();
         this.keyboardsniffer = new KeyBoardController(this);
 
         this.events.on('server-yourID', (playerID) => {
@@ -141,15 +142,16 @@ export default class PlayGameScene extends Phaser.Scene {
         let barrel = new BarrelSprite(this);
 
         this.add.existing(player);
+        this.physics.add.existing(player);
         this.add.existing(barrel);
+        this.physics.add.existing(barrel);
 
         this.input.on('pointermove', function (pointer) {
             barrel.rotation = Phaser.Math.Angle.Between(player.x, player.y, pointer.x, pointer.y) + (3.14159/2);
         }, this);
 
-    }
-
-    createControllers () {
+        let playerController = new PlayerController(this, player);
+        // let barrelController = new BarrelController(this, barrel);
     }
 
     createMap () {
