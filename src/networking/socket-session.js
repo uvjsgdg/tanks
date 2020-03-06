@@ -50,7 +50,7 @@ export default class SocketSession {
     }
 
     listenForServerMessages () {
-        this.socket.on('disconnect', () {
+        this.socket.on('disconnect', () => {
             console.log('WEBSOCKET SERVER TERMINATED CONNECTION!');
             scene.events.emit('server-disconnected', {});
         });
