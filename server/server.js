@@ -80,16 +80,6 @@ class Server {
                 }
             });
 
-            socket.on('getPlayerMovements', (fn) => {
-                let playerData = [];
-                Object.values(this.connections).forEach((c) => {
-                    if (c.moveData) {
-                        playerData.push(c.moveData);
-                    }
-                });
-                fn(playerData);
-            });
-
             socket.on('sendAttack', (data) => {
                 console.log('[' + id + '] sendAttack: ' + message);
                 if (this.connections[id].userName) {
@@ -147,7 +137,12 @@ class Server {
                 let players = [];
                 Object.values(this.connections).forEach((c) => {
                     if (c.userName) {
-                        players.push(c.userName);
+                        if(c.moveData){
+                            players.push(c.moveData);
+                        }
+                        else{
+                            players.push({ userName: c.userName });
+                        }
                     }
                 });
                 fn(players);
