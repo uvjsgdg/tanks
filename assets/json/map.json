@@ -253,127 +253,253 @@
                  "id":0,
                  "image":"..\/images\/spriteatlas_parts\/barrelGreen.png",
                  "imageheight":28,
-                 "imagewidth":20
+                 "imagewidth":20,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"barrelGreen"
+                        }]
                 }, 
                 {
                  "id":1,
                  "image":"..\/images\/spriteatlas_parts\/barrelRed.png",
                  "imageheight":28,
-                 "imagewidth":20
+                 "imagewidth":20,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"barrelRed"
+                        }]
                 }, 
                 {
                  "id":2,
                  "image":"..\/images\/spriteatlas_parts\/barricadeMetal.png",
                  "imageheight":28,
-                 "imagewidth":28
+                 "imagewidth":28,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"barricadeMetal"
+                        }]
                 }, 
                 {
                  "id":3,
                  "image":"..\/images\/spriteatlas_parts\/barricadeWood.png",
                  "imageheight":28,
-                 "imagewidth":28
+                 "imagewidth":28,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"barricadeWood"
+                        }]
                 }, 
                 {
                  "id":4,
                  "image":"..\/images\/spriteatlas_parts\/crateWood.png",
                  "imageheight":28,
-                 "imagewidth":28
+                 "imagewidth":28,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"crateWood"
+                        }]
                 }, 
                 {
                  "id":5,
                  "image":"..\/images\/spriteatlas_parts\/gemBlue.png",
                  "imageheight":28,
-                 "imagewidth":32
+                 "imagewidth":32,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"gemBlue"
+                        }]
                 }, 
                 {
                  "id":6,
                  "image":"..\/images\/spriteatlas_parts\/gemGreen.png",
                  "imageheight":28,
-                 "imagewidth":32
+                 "imagewidth":32,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"gemGreen"
+                        }]
                 }, 
                 {
                  "id":7,
                  "image":"..\/images\/spriteatlas_parts\/gemOrange.png",
                  "imageheight":28,
-                 "imagewidth":32
+                 "imagewidth":32,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"gemOrange"
+                        }]
                 }, 
                 {
                  "id":8,
                  "image":"..\/images\/spriteatlas_parts\/gemYellow.png",
                  "imageheight":28,
-                 "imagewidth":32
+                 "imagewidth":32,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"gemYellow"
+                        }]
                 }, 
                 {
                  "id":9,
                  "image":"..\/images\/spriteatlas_parts\/oilSpill_large.png",
                  "imageheight":50,
-                 "imagewidth":50
+                 "imagewidth":50,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"oilSpill_large"
+                        }]
                 }, 
                 {
                  "id":10,
                  "image":"..\/images\/spriteatlas_parts\/oilSpill_small.png",
                  "imageheight":14,
-                 "imagewidth":14
+                 "imagewidth":14,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"oilSpill_small"
+                        }]
                 }, 
                 {
                  "id":11,
                  "image":"..\/images\/spriteatlas_parts\/treeBrown_large.png",
                  "imageheight":64,
-                 "imagewidth":64
+                 "imagewidth":64,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"treeBrown_large"
+                        }]
                 }, 
                 {
                  "id":12,
                  "image":"..\/images\/spriteatlas_parts\/treeBrown_small.png",
                  "imageheight":36,
-                 "imagewidth":36
+                 "imagewidth":36,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"treeBrown_small"
+                        }]
                 }, 
                 {
                  "id":13,
                  "image":"..\/images\/spriteatlas_parts\/treeBrown_twigs.png",
                  "imageheight":22,
-                 "imagewidth":26
+                 "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"treeBrown_twigs"
+                        }]
                 }, 
                 {
                  "id":14,
                  "image":"..\/images\/spriteatlas_parts\/treeGreen_large.png",
                  "imageheight":64,
-                 "imagewidth":64
+                 "imagewidth":64,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"treeGreen_large"
+                        }]
                 }, 
                 {
                  "id":15,
                  "image":"..\/images\/spriteatlas_parts\/treeGreen_small.png",
                  "imageheight":36,
-                 "imagewidth":36
+                 "imagewidth":36,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"treeGreen_small"
+                        }]
                 }, 
                 {
                  "id":16,
                  "image":"..\/images\/spriteatlas_parts\/treeGreen_twigs.png",
                  "imageheight":22,
-                 "imagewidth":26
+                 "imagewidth":26,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"treeGreen_twigs"
+                        }]
                 }, 
                 {
                  "id":17,
                  "image":"..\/images\/spriteatlas_parts\/wireCrooked.png",
                  "imageheight":48,
-                 "imagewidth":44
+                 "imagewidth":44,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"wireCrooked"
+                        }]
                 }, 
                 {
                  "id":18,
                  "image":"..\/images\/spriteatlas_parts\/wireStraight.png",
                  "imageheight":70,
-                 "imagewidth":17
+                 "imagewidth":17,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"wireStraight"
+                        }]
                 }, 
                 {
                  "id":19,
                  "image":"..\/images\/spriteatlas_parts\/tracksLarge.png",
                  "imageheight":52,
-                 "imagewidth":41
+                 "imagewidth":41,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"tracksLarge"
+                        }]
                 }, 
                 {
                  "id":20,
                  "image":"..\/images\/spriteatlas_parts\/tracksSmall.png",
                  "imageheight":52,
-                 "imagewidth":37
+                 "imagewidth":37,
+                 "properties":[
+                        {
+                         "name":"key",
+                         "type":"string",
+                         "value":"tracksSmall"
+                        }]
                 }],
          "tilewidth":64
         }],
