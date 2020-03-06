@@ -72,6 +72,13 @@ export default class PlayGameScene extends Phaser.Scene {
             console.log('WEBSOCKET SERVER DELETE PLAYER!');
             delete this.players[userName];
         });
+
+        this.events.on('server-players', (players) => {
+            console.log('WEBSOCKET SERVER PLAYERS!');
+            let newPlayers = {};
+            players.forEach(element => newPlayers[element.userName] = element);
+            this.players = players;
+        });
     }
 
     update () {
@@ -92,6 +99,7 @@ export default class PlayGameScene extends Phaser.Scene {
                 if (contents[1]) {
                     console.log("LOGIN AS USER: " + contents[1]);
                     this.socketSession.send('doLogin', contents[1]);
+                    this.socketSession.send('getPlayers');
                 }
             }
             else if (contents[0] == '/logout') {
