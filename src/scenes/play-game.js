@@ -49,7 +49,44 @@ export default class PlayGameScene extends Phaser.Scene {
             var contents = message.split(" ");
             this.game.appMessage.value = '';
             // Parse contents for commands
+            if (contents[0] == '/login') {
+                if (contents[1]) {
+                    console.log("LOGIN AS USER: " + contents[1]);
+                    this.socketSession.send('doLogin', contents[1]);
+                }
+            }
+            else if (contents[0] == '/logout') {
+                if (this.userName) {
+                    console.log('LOGOUT!');
+                    this.socketSession.send('doLogout');
+                }
+                else {
+                    console.log('Not logged in.');
+                }
+            }
+            else if (contents[0].substr(0,1) == '/') {
+                console.log("Unknown command: " + contents[0]);
+                this.game.appMessage.value = message;
+            }
+            else if (this.userName) {
+                // Appears to be logged in so send message to server.
+                console.log("MESSAGE: " + message);
+                this.socket.emit('sendMessage', message);
+            }
+            else {
+                // Attempting to talk without being logged in.
+                this.game.appMessage.value = message;
+                this.appendServerStatus("You can't speak until after you /login");
+            }
         }
+    }
+
+    appendServerStatus (message) {
+        if (this.game.serverStatus.value != '') {
+            this.game.serverStatus.value += '\n';
+        }
+        this.game.serverStatus.value = this.game.serverStatus.value + message;
+        this.game.serverStatus.scrollTop = this.game.serverStatus.scrollHeight;
     }
 
     createPlayer () {
