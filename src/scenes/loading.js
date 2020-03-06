@@ -1,5 +1,5 @@
 // json imports
-// import assetsConfig from '../config/assets.json';
+import gameConfig from '../../config/game.json';
 
 // web fonts
 // import WebFont from 'webfontloader';
