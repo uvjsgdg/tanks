@@ -55,7 +55,7 @@ export default class SocketSession {
 
             console.log('serverMessage:', message);
 
-            this.scene.emit(message.action, message.data);
+            this.scene.events.emit(message.action, message.data);
         });
     }
 };
